@@ -1,0 +1,52 @@
+{
+  "name": "odata-v4-server-mysql-example",
+  "version": "0.1.0",
+  "description": "OData V4 Server with MySQL example",
+  "main": "dist/index.js",
+  "typings": "dist/index",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node .",
+    "build": "npm run tsc",
+    "tsc": "tsc",
+    "tsc:s": "tsc --skipLibCheck",
+    "tsc:w": "tsc -w",
+    "test": "mocha test/*.spec.js --reporter mochawesome --reporter-options reportDir=report,reportName=odata-v4-server,reportTitle=\"OData V4 Server\"",
+    "pretest": "npm run build",
+    "postinstall": "sh scripts/postinstall.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaystack/odata-v4-server-mysql-example.git"
+  },
+  "author": "JayStack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaystack/odata-v4-server-mysql-example/issues"
+  },
+  "homepage": "https://github.com/jaystack/odata-v4-server-mysql-example#readme",
+  "keywords": [
+    "odata",
+    "server",
+    "mysql"
+  ],
+  "devDependencies": {
+    "@types/mysql": "0.0.30",
+    "chai": "^3.5.0",
+    "mocha": "^7.1.1",
+    "mochawesome": "^5.0.0",
+    "typescript": "^2.4"
+  },
+  "dependencies": {
+    "mysql": "^2.18.0",
+    "odata-v4-mysql": "^0.1.1",
+    "odata-v4-server": "^0.2.13",
+    "odata-v4-parser": "^0.1.29",
+    "odata-v4-sql": "^0.1.2"
+  },
+  "engines": {
+    "node": "10.11.x"
+  }
+}
