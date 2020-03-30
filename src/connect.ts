@@ -2,10 +2,10 @@ import * as mysql from "mysql";
 import promisify from "./utils/promisify";
 
 const config: mysql.IConnectionConfig = <mysql.IConnectionConfig>{
-    "host": "localhost",
-    "user": "root",
-    "password": "",
-    "database": "northwind"
+    "host": "database-1.co724hnza5vm.us-east-1.rds.amazonaws.com",
+    "user": "admin",
+    "password": "database123",
+    "database": "database-1"
 };
 
 let connection = null;
